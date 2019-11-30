@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container" id="pool">
+
+       
+        <div class="row" v-if="!button">
+            <div class="col-12 text-center mb-4 mt-4">
+                <h1>Create A Draw - 32 TEAMS</h1>
+            </div>
+            <hr>
+
+            <div class="col-12 col-md-3 text-success ">
+                <div class="text-center">
+                    <h2>First Pool</h2>
+                    <hr>
+                </div>
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create2"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create3"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create4"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create5"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create6"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create7"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create8"
+                    id="">
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="text-center text-success">
+                    <h2>Second Pool</h2>
+                    <hr>
+                </div>
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name="" v-model="create9"
+                    id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create10" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create11" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create12" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create13" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create14" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create15" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create16" id="">
+
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="text-center text-success">
+                    <h2>Third Pool</h2>
+                    <hr>
+                </div>
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create17" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create18" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create19" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create20" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create21" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create22" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create23" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create24" id="">
+            </div>
+            <div class="col-12 col-md-3 text-success">
+                <div class="text-center">
+                    <h2>Fourth Pool</h2>
+                    <hr>
+                </div>
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create25" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create26" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create27" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create28" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create29" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create30" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create31" id="">
+                <input type="text" class="form-control mt-3" placeholder="Takım İsmi Giriniz!" name=""
+                    v-model="create32" id="">
+            </div>
+            <div class="w-100"> <button @click="createpool" class="btn btn-success mt-5 w-100">Create A Draw</button>
+            </div>
+
+        </div>
+
+        <div class="row " v-if=button>
+            <div class="col-12 text-center mt-4"> <button class="btn btn-success " v-if="!show" @click="pool">Draw</button></div>
+            <div class="col-12 text-center mt-4"> <button class="btn btn-danger " v-if="show" @click="repoolSame">Draw with Same Teams</button></div>
+            <div class="col-12 text-center mt-4"> <button class="btn btn-primary " v-if="show" @click="repool">New Create A Draw</button></div>
+
+            <div class="col-12 border mt-4 table bg-success d-none  d-md-inline"><span class="text-white">POOL
+                    1</span><span v-for="(item,i) in pool1"
+                    class="bg-secondary  rounded text-white p-2 mx-3 col-12"><strong>{{i+1}}.{{item}} </strong></span>
+            </div>
+            <div class="col-12 border mt-4 table bg-primary d-none  d-md-inline"><span class="text-white">POOL
+                    2</span><span v-for="(item,i) in pool2"
+                    class="bg-secondary rounded text-white p-2 mx-3"><strong>{{i+1}}. {{item}} </strong></span></div>
+            <div class="col-12 border mt-4 table bg-danger d-none  d-md-inline"><span class="text-white">POOL
+                    3</span><span v-for="(item,i) in pool3"
+                    class="bg-secondary rounded text-white p-2 mx-3"><strong>{{i+1}}. {{item}} </strong></span></div>
+            <div class="col-12 border mt-4 table bg-warning d-none  d-md-inline"><span class="text-white">POOL
+                    4</span><span v-for="(item,i) in pool4"
+                    class="bg-secondary rounded text-white p-2 mx-3"><strong>{{i+1}}. {{item}} </strong></span></div>
+
+            <div class="d-inline d-md-none">
+                <div class="col-12 border mt-4 table "><span class="text-dark">POOL 1 Teams/ </span><span
+                        v-for="(item,i) in pool1" class=""><strong>{{i+1}}.{{item}} </strong></span></div>
+                <div class="col-12 border mt-4 table  "><span class="text-dark">POOL 2 Teams/ </span><span
+                        v-for="(item,i) in pool2" class=""><strong>{{i+1}}. {{item}} </strong></span></div>
+                <div class="col-12 border mt-4 table "><span class="text-dark">POOL 3 Teams/ </span><span
+                        v-for="(item,i) in pool3" class=" "><strong>{{i+1}}. {{item}} </strong></span></div>
+                <div class="col-12 border mt-4 table  "><span class="text-dark">POOL 4 Teams / </span><span
+                        v-for="(item,i) in pool4" class=" "><strong>{{i+1}}. {{item}} </strong></span></div>
+
+            </div>
+
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group A</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupA">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group B</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupB">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group C</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupC">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group D</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupD">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group E</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupE">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group F</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupF">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group G</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupG">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4 col-12   rounded kare mt-5">
+                <div class="text-center bg-primary text-white rounded">Group H</div>
+                <table class="table table-striped mt-3">
+                    <tbody>
+                        <tr v-for="(item,i) in GroupH">
+                            <td>{{i+1}}.</td>
+                            <td>{{item}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: "#pool",
+            data: {
+
+                pool1: [],
+                pool2: [],
+                pool3: [],
+                pool4: [],
+                GroupA: [],
+                GroupB: [],
+                GroupC: [],
+                GroupD: [],
+                x: 8,
+                GroupE: [],
+                GroupF: [],
+                GroupG: [],
+                GroupH: [],
+                show: false,
+                create: "",
+                create2: "",
+                create3: "",
+                create4: "",
+                create5: "",
+                create6: "",
+                create7: "",
+                create8: "",
+                create9: "",
+                create10: "",
+                create11: "",
+                create12: "",
+                create13: "",
+                create14: "",
+                create15: "",
+                create16: "",
+                create17: "",
+                create18: "",
+                create19: "",
+                create20: "",
+                create21: "",
+                create22: "",
+                create23: "",
+                create24: "",
+                create25: "",
+                create26: "",
+                create27: "",
+                create28: "",
+                create29: "",
+                create30: "",
+                create31: "",
+                create32: "",
+                button: false
+
+            },
+            methods: {
+                createpool: function () {
+                    console.log(this.create)
+                    this.pushTeams1(this.create, this.create2, this.create3, this.create4, this.create5,
+                        this.create6, this.create7, this.create8)
+                    this.pushTeams2(this.create9, this.create10, this.create11, this.create12, this
+                        .create13, this.create14, this.create15, this.create16)
+                    this.pushTeams3(this.create17, this.create18, this.create19, this.create20, this
+                        .create21, this.create22, this.create23, this.create24)
+                    this.pushTeams4(this.create25, this.create26, this.create27, this.create28, this
+                        .create29, this.create30, this.create31, this.create32)
+                    this.button = !this.button
+
+                },
+                pushTeams1: function (value, value2, value3, value4, value5, value6, value7, value8) {
+
+                    this.pool1.push(value)
+                    this.pool1.push(value2)
+                    this.pool1.push(value3)
+                    this.pool1.push(value4)
+                    this.pool1.push(value5)
+                    this.pool1.push(value6)
+                    this.pool1.push(value7)
+                    this.pool1.push(value8)
+                    console.log(this.pool1)
+
+                },
+                pushTeams2: function (value9, value10, value11, value12, value13, value14, value15,
+                    value16) {
+
+                    this.pool2.push(value9)
+                    this.pool2.push(value10)
+                    this.pool2.push(value11)
+                    this.pool2.push(value12)
+                    this.pool2.push(value13)
+                    this.pool2.push(value14)
+                    this.pool2.push(value15)
+                    this.pool2.push(value16)
+                    console.log(this.pool2)
+
+                },
+                pushTeams3: function (value17, value18, value19, value20, value21, value22, value23,
+                    value24) {
+
+                    this.pool3.push(value17)
+                    this.pool3.push(value18)
+                    this.pool3.push(value19)
+                    this.pool3.push(value20)
+                    this.pool3.push(value21)
+                    this.pool3.push(value22)
+                    this.pool3.push(value23)
+                    this.pool3.push(value24)
+                    console.log(this.pool3)
+
+                },
+                pushTeams4: function (value25, value26, value27, value28, value29, value30, value31,
+                    value32) {
+
+                    this.pool4.push(value25)
+                    this.pool4.push(value26)
+                    this.pool4.push(value27)
+                    this.pool4.push(value28)
+                    this.pool4.push(value29)
+                    this.pool4.push(value30)
+                    this.pool4.push(value31)
+                    this.pool4.push(value32)
+                    console.log(this.pool4)
+
+                },
+
+                pool: function () {
+                    var vm = this
+                    var x = 6
+                    for (let id = 1; id > 0; id--) {
+                        this.gropus(this.GroupA, 8)
+                    }
+                    for (let id = 1; id > 0; id--) {
+                        this.gropus(this.GroupB, 7)
+                    }
+                    for (let id = 1; id > 0; id--) {
+                        this.gropus(this.GroupC, 6)
+                    }
+                    for (let id = 1; id > 0; id--) {
+                        this.gropus(this.GroupD, 5)
+                    }
+                    for (let id = 1; id > 0; id--) {
+                        this.gropus(this.GroupE, 4)
+                    }
+                    for (let id = 1; id > 0; id--) {
+
+                        this.gropus(this.GroupF, 3)
+
+                    }
+                    for (let id = 1; id > 0; id--) {
+
+                        this.gropus(this.GroupG, 2)
+
+                    }
+                    for (let id = 1; id > 0; id--) {
+
+                        this.gropus(this.GroupH, 1)
+
+                    }
+
+                    this.show = !this.show
+
+
+                },
+                repool: function () {
+                    this.pool1= [],
+                this.pool2= [],
+                this.pool3= [],
+                this.pool4= [],
+                this.GroupA= [],
+                this.GroupB= [],
+                this.GroupC= [],
+                this.GroupD= [],
+                this.x= 8,
+                this.GroupE= [],
+                this.GroupF= [],
+                this.GroupG= [],
+                this.GroupH= [],
+                this.show= false,
+                this.create= "",
+                this.create2= "",
+                this.create3= "",
+                this.create4= "",
+                this.create5= "",
+                this.create6= "",
+                this.create7= "",
+                this.create8= "",
+                this.create9= "",
+                this.create10= "",
+                this.create11= "",
+                this.create12= "",
+                this.create13= "",
+                this.create14= "",
+                this.create15= "",
+                this.create16= "",
+                this.create17= "",
+                this.create18= "",
+                this.create19= "",
+                this.create20= "",
+                this.create21= "",
+                this.create22= "",
+                this.create23= "",
+                this.create24= "",
+                this.create25= "",
+                this.create26= "",
+                this.create27= "",
+                this.create28= "",
+                this.create29= "",
+                this.create30= "",
+                this.create31= "",
+                this.create32= "",
+
+
+                    this.button = !this.button
+                },
+                repoolSame: function () {
+                    this.pool1= [this.create,this.create2,this.create3,this.create4,this.create5,this.create6,this.create7,this.create8],
+                this.pool4= [this.create25,this.create26,this.create27,this.create28,this.create29,this.create30,this.create31,this.create32],
+                this.pool2= [this.create9,this.create10,this.create11,this.create12,this.create13,this.create14,this.create15,this.create16],
+                this.pool3= [this.create17,this.create18,this.create19,this.create20,this.create21,this.create22,this.create23,this.create24],
+                this.GroupA= [],
+                this.GroupB= [],
+                this.GroupC= [],
+                this.GroupD= [],
+                this.x= 8,
+                this.GroupE= [],
+                this.GroupF= [],
+                this.GroupG= [],
+                this.GroupH= []
+  
+                 this.show=!this.show
+                },
+
+                gropus: function (value, b) {
+
+                    var deletid = Math.floor(Math.random() * b)
+                    var deletid2 = Math.floor(Math.random() * b)
+                    var deletid3 = Math.floor(Math.random() * b)
+                    var deletid4 = Math.floor(Math.random() * b)
+                    value.push(this.pool1[deletid])
+                    value.push(this.pool2[deletid2])
+                    value.push(this.pool3[deletid3])
+                    value.push(this.pool4[deletid4])
+                    this.delete(this.pool1, this.pool2, this.pool3, this.pool4, deletid, deletid2,
+                        deletid3, deletid4)
+                    this.show = !this.show
+                },
+                delete: function (value, value2, value3, value4, deletid, deletid2, deletid3, deletid4) {
+                    this.$delete(value, deletid)
+                    this.$delete(value2, deletid2)
+                    this.$delete(value3, deletid3)
+                    this.$delete(value4, deletid4)
+                },
+
+
+            },
+            watch:{
+                create:function(){
+                    if(this.create==""){
+                        this.$delete(this.pool1,1)
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
